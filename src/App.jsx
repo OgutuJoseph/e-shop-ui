@@ -1,7 +1,7 @@
-// import Home from "./pages/home/Home";
+import Home from "./pages/home/Home";
 
 const App = () => {
-  return <div>Home</div>;
+  return <Home />;
 };
 
 export default App;
