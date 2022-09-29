@@ -1,11 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 
-/** import material components */
-
-
-/** import material icons */
-
 /** styled components */
 const Container = styled.div`
     height: 30px;

@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 
-/** import material components */
-
 /** import material icons */
 import ArrowLeftOutlinedIcon from '@mui/icons-material/ArrowLeftOutlined';
 import ArrowRightOutlinedIcon from '@mui/icons-material/ArrowRightOutlined';
@@ -94,7 +92,7 @@ const Slider = () => {
             </Arrow>
             <Wrapper slideIndex={slideIndex}>
                 {sliderItems.map(item => (
-                    <Slide index={item.id}>
+                    <Slide key={item.id}>
                         <ImgContainer>
                             <Img src={item.img} />
                         </ImgContainer>
