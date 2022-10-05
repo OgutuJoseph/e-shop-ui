@@ -1,10 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 
-/** import components */
-
-/** import material ui icons */
-
 /** styled components */
 const Container = styled.div`
     width: 100vw;
