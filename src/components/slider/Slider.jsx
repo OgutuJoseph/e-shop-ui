@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 
+/** import css different media types */
+import { mobile } from '../../responsive';
+
 /** import material icons */
 import ArrowLeftOutlinedIcon from '@mui/icons-material/ArrowLeftOutlined';
 import ArrowRightOutlinedIcon from '@mui/icons-material/ArrowRightOutlined';
@@ -15,6 +18,8 @@ const Container = styled.div`
     display: flex;
     position: relative; 
     overflow: hidden;
+
+    ${mobile({ width: '100vw' })} 
 `
 const Arrow = styled.div`
     width: 50px;
@@ -39,6 +44,8 @@ const Wrapper = styled.div`
     display: flex;
     transition: all 1.5s ease;
     transform: translateX(${(props) => props.slideIndex * -100}vw);
+    
+    ${mobile({ width: '100vw' })} 
 `
 const Slide = styled.div`
     width: 100vw;
@@ -49,13 +56,17 @@ const Slide = styled.div`
 const ImgContainer = styled.div`
     flex: 1;
     height: 100%;
+    
+    ${mobile({ display: 'none' })}
 `
 const Img = styled.img`
-    height: 80%
+    height: 80% 
 `
 const InfoContainer = styled.div`
     flex: 1;
     padding; 50px;
+
+    ${mobile({ width: '100vw' })}  
 `
 const Title = styled.h1`
     font-size: 70px;

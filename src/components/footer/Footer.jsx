@@ -1,6 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
 
+/** import css different media types */
+import { mobile } from '../../responsive';
+
 /** import material icons */ 
 import FacebookIcon from '@mui/icons-material/Facebook';
 import InstagramIcon from '@mui/icons-material/Instagram';
@@ -13,6 +16,8 @@ import MailOutlineIcon from '@mui/icons-material/MailOutline';
 /** styled components */
 const Container = styled.div`
     display: flex;
+
+    ${mobile({ flexDirection: 'column' })} 
 `
 const Left = styled.div`
     flex: 1;
@@ -42,7 +47,7 @@ const SocialIcon = styled.div`
 `
 const Center = styled.div`
     flex: 1;
-    padding: 20px;
+    padding: 20px; 
 
 `
 const Title = styled.h3`
@@ -62,6 +67,8 @@ const ListItem = styled.li`
 const Right = styled.div`
     flex: 1;
     padding: 20px;
+
+    ${mobile({ backgroundColor: '#fff8f8' })} 
 `
 const ContactItem = styled.div`
     margin-bottom: 20px;

@@ -1,11 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
 
+/** import css different media types */
+import { mobile } from '../../responsive';
+
 /** import components */
 import Announcement from '../../components/announcement/Announcement';
 import Navbar from '../../components/navbar/Navbar';
 import Footer from '../../components/footer/Footer';
-
 
 /** import material ui icons */
 import AddIcon from '@mui/icons-material/Add';
@@ -17,6 +19,8 @@ const Container = styled.div`
 `
 const Wrapper = styled.div`
     padding: 20px;
+
+    ${mobile({ padding: '10px' })}
 `
 const Title = styled.h1`
     font-weight: 300;
@@ -37,7 +41,7 @@ const TopButton = styled.button`
     color: ${(props) => props.type === 'filled' && 'white'}
 `
 const TopTexts = styled.div`
-
+    ${mobile({ display: 'none' })}
 `
 const TopText = styled.span`
     cursor: pointer;
@@ -50,6 +54,8 @@ const TopText = styled.span`
 const Bottom = styled.div`
     display: flex;
     justify-content: space-between;
+
+    ${mobile({ flexDirection: 'column' })}
 `
 const Info = styled.div`
     flex: 3;
@@ -57,6 +63,8 @@ const Info = styled.div`
 const Product = styled.div`
     display: flex;
     jsutify-content: space-between;
+
+    ${mobile({ flexDirection: 'column', paddingBottom: '20px' })}
 `
 const Hr = styled.hr`
     background-color: #eee;
@@ -106,6 +114,8 @@ const ProductAmountContainer = styled.div`
 const ProductAmount = styled.div`
     font-size: 24px;
     margin: 5px;
+
+    ${mobile({ margin: '5px 15px' })}
 `
 const ProductPrice = styled.span`
     font-size: 30px;
